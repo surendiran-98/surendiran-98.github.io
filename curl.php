@@ -1,20 +1,11 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+<title>Online PHP Script Execution</title>
 </head>
 <body>
-	<div class="header">
-		<h2>Home Page</h2>
-	</div>
-	<div class="content">
-
-		<?php
-	shell_exec("testt.sh");
-	header('Location: http://localhost/curl.php?success=true');
-	?>
-	</div>
-		
+<?php
+$output =  shell_exec("bash.sh");
+echo "<pre>$output</pre>";
+?>
 </body>
 </html>
